@@ -1,11 +1,11 @@
-import { Element } from "react-scroll";
+
 import { motion } from "framer-motion";
 import { features } from "../constants/index.jsx";
 
 const Features = () => {
   return (
     <section className="py-24 px-4 md:px-12 lg:px-24 bg-gradient-to-b from-s2 to-s1">
-      <Element name="features">
+     
         <div className="container w-full">
           <div className="relative flex md:flex-wrap flex-nowrap border-2 border-s3 rounded-[3rem] md:overflow-hidden max-md:flex-col feature-after md:g7 max-md:border-none max-md:rounded-none max-md:gap-6">
             {features.map(({ id, icon, caption, title, topics, description, attendees }) => (
@@ -73,7 +73,7 @@ const Features = () => {
             ))}
           </div>
         </div>
-      </Element>
+     
     </section>
   );
 };
