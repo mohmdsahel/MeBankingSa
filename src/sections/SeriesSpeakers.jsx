@@ -232,7 +232,7 @@ const SeriesSpeakers = () => {
           whileInView={{ opacity: 1, y: 0 }}
           className="text-4xl font-bold text-center mb-16 text-white"
         >
-          "Series <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A3FF] to-[#0057FF]">Speakers</span>"
+          Series <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A3FF] to-[#0057FF]">Speakers</span>
         </motion.h2>
         
         <SeriesCard

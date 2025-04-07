@@ -135,8 +135,8 @@ const Faq = () => {
          {/* Summit Highlights Section */}
          <div className="mt-20">
             <h1 className="text-center mb-12">
-              <span className="text-4xl font-bold text-white">2024 SUMMIT</span>
-              <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-p1 to-blue-500"> HIGHLIGHTS</span>
+              <span className="text-4xl font-bold text-white">2024 Summit</span>
+              <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-p1 to-blue-500"> Highlights</span>
             </h1>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1000px] mx-auto">

@@ -125,7 +125,7 @@ const Collaboration = () => {
   return (
     <div className="container">
       <h2 className="text-center text-white text-4xl font-bold m-16">
-      "2025 Thought Leadership <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A3FF] to-[#0057FF]">PARTNERS</span>"
+      2025 Thought Leadership <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A3FF] to-[#0057FF]">PARTNERS</span>
       </h2>
   
       {/* Top Tier Partners */}

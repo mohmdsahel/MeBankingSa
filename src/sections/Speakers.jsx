@@ -86,7 +86,7 @@ const Speakers = () => {
           whileInView={{ opacity: 1, y: 0 }}
           className="text-4xl font-bold text-center mb-16 text-white"
         >
-          "Featured <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A3FF] to-[#0057FF]">Speakers</span>"
+         2025 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A3FF] to-[#0057FF]">Speakers</span>
         </motion.h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

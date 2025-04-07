@@ -6,7 +6,7 @@ const Pricing = () => {
       <div className="container relative z-2">
        
       <h2  className="text-4xl text-center font-bold mt-20 m-12 text-white">
-            "Book your <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A3FF] to-[#0057FF]">tickets!</span>"
+            Book your <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A3FF] to-[#0057FF]">tickets!</span>
           </h2>
 
         <div className="relative">
