@@ -1,4 +1,4 @@
-import { Element } from "react-scroll"; 
+import { motion } from "framer-motion"; 
 import { faq } from "../constants/index.jsx";
 import FaqItem from "../components/FaqItem.jsx";
 
@@ -64,7 +64,12 @@ const Faq = () => {
 
   return (
     <section>
-      <Element name="faq" className="relative">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="relative"
+      />
         <div className="container relative z-2 py-28">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
             {flipCards.map((card) => (
@@ -102,11 +107,15 @@ const Faq = () => {
          
         </div>
 
-        <div className="faq-glow_before relative z-2 border-2 border-s2 bg-s1">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="faq-glow_before relative z-2 border-2 border-s2 bg-s1"
+        />
           <div className="container flex gap-10 max-lg:block">
-            <div className="rounded-half absolute -top-10 left-[calc(50%-40px)] z-4 flex size-20 items-center justify-center border-2 border-s2 bg-s1">
-              <img src="/images/logoo.png" alt="logo" className="size-10" />
-            </div>
+            
 
             <div className="relative flex-1 pt-24">
               {faq.slice(0, halfLength).map((item, index) => (
@@ -121,8 +130,8 @@ const Faq = () => {
             </div>
           </div>
 
-          <div className="faq-lin_after absolute left-[calc(50%-1px)] top-0 -z-1 h-full w-0.5 bg-s2 max-lg:hidden" />
-        </div>
+          
+        
          {/* Summit Highlights Section */}
          <div className="mt-20">
             <h1 className="text-center mb-12">
@@ -155,7 +164,7 @@ const Faq = () => {
               </div>
             </div>
           </div>
-      </Element>
+      
     </section>
   );
 };

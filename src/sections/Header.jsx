@@ -1,35 +1,61 @@
-import { Link as LinkScroll } from "react-scroll";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 
 const Header = () => {
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
       setHasScrolled(window.scrollY > 32);
+      
+      // Update active section based on scroll position
+      const sections = ["about", "speakers", "key topic", "partners", "tickets", "register"];
+      const currentSection = sections.find(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 150 && rect.bottom >= 150;
+        }
+        return false;
+      });
+      
+      if (currentSection) setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = (title) => {
+    setIsOpen(false);
+    const element = document.getElementById(title);
+    if (element) {
+      const offset = -100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset + offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   const NavLink = ({ title }) => (
-    <LinkScroll
-      onClick={() => setIsOpen(false)}
-      to={title}
-      offset={-100}
-      spy
-      smooth
-      activeClass="nav-active"
-      className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5"
+    <motion.span
+      onClick={() => scrollToSection(title)}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className={clsx(
+        "base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5",
+        activeSection === title && "nav-active"
+      )}
     >
       {title}
-    </LinkScroll>
+    </motion.span>
   );
 
   return (

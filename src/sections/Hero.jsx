@@ -1,16 +1,26 @@
-import { Element, Link as LinkScroll } from "react-scroll";
-import Button from "../components/Button.jsx";
 import { motion } from "framer-motion";
 import { ColourfulText } from "../components/ColourfulText";
 import Countdown from "../components/Countdown.jsx";
 
 const Hero = () => {
+  const scrollToFeatures = () => {
+    window.scrollTo({
+      top: document.getElementById('features').offsetTop - 100,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <section className="relative pt-60 pb-40 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32">
-      <Element name="hero">
+      <div id="hero">
         <div className="container">
           <div className="flex items-center justify-center">
-            <div className="relative z-2 text-center">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative z-2 text-center"
+            >
               <h1 className="mb-6 h2 text-p4 uppercase max-lg:mb-7 max-lg:h3 max-md:mb-4 max-md:text-3xl max-md:leading-10 max-sm:text-2xl max-sm:leading-8">
                 10th Middle East <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A3FF] to-[#0057FF]">Banking</span><br />
                 AI & Analytics Summit 2025
@@ -32,13 +42,18 @@ const Hero = () => {
                   </span>
                 </div>
               </div>
-              <LinkScroll to="features" offset={-100} spy smooth>
+              <motion.div 
+                onClick={scrollToFeatures}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                style={{ cursor: 'pointer' }}
+              >
                 <Countdown/>
-              </LinkScroll>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
-      </Element>
+      </div>
       <div className="absolute inset-0 w-full h-full pointer-events-none">
         <video 
           src="/images/herobg.webm" 
