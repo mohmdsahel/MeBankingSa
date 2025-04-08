@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 
 export function ColourfulText({ text }) {
   const colors = [
-    "#0EA5E9",  // Sky blue
+    "#00A3FF",  // Light blue
+    "#0057FF",  // Medium blue
     "#3B82F6",  // Blue
-    "#6366F1",  // Indigo
-   
-   
-   
-    "#10B981",  // Emerald
-    "#14B8A6",  // Teal
+    "#0369A1",  // Deep blue
+    "#1E40AF",  // Navy blue
+    "#2563EB",  // Royal blue
+    "#0284C7",  // Sky blue
+    "#0EA5E9",  // Bright blue
   ];
 
   const [currentColors, setCurrentColors] = React.useState(colors);

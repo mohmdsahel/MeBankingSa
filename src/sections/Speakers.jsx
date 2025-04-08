@@ -79,12 +79,19 @@ const speakers = [
 
 const Speakers = () => {
   return (
-    <section className="py-24 px-4 md:px-12 lg:px-24 bg-gradient-to-b from-s1 to-s2">
+    <section id="speakers">
+       <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="faq-glow_before relative z-2 border-2 border-s2 bg-s1"
+        />
       <div className="container max-w-[90rem] mx-auto">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-4xl font-bold text-center mb-16 text-white"
+          className="text-4xl font-bold text-center  m-16 text-white"
         >
          2025 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A3FF] to-[#0057FF]">Speakers</span>
         </motion.h2>
@@ -123,7 +130,9 @@ const Speakers = () => {
        
       </div>
       <SeriesSpeakers />
+      
     </section>
+    
   );
 };
 

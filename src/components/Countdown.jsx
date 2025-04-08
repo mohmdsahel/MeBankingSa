@@ -21,16 +21,16 @@ const Countdown = () => {
 
 	return (
 		<div className="py-8">
-			<div className="flex justify-center gap-6 flex-nowrap">
+			<div className="flex justify-center gap-4 md:gap-6 flex-nowrap">
 				{Object.entries(timeLeft).map(([label, value]) => (
 					<div 
 						key={label} 
-						className="flex flex-col items-center bg-gradient-to-b from-[#ffffff10] to-[#ffffff05] backdrop-blur-sm rounded-xl px-6 py-4 min-w-[120px] border border-[#ffffff20]"
+						className="flex flex-col items-center bg-gradient-to-b from-[#ffffff10] to-[#ffffff05] backdrop-blur-sm rounded-xl px-2 sm:px-4 md:px-6 py-2 md:py-4 w-[22%] sm:w-[20%] md:w-auto md:min-w-[120px] border border-[#ffffff20]"
 					>
-						<div className="text-4xl font-bold bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">
+						<div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">
 							{value.toString().padStart(2, '0')}
 						</div>
-						<span className="uppercase text-sm text-[#fff] opacity-60 mt-2 font-medium">
+						<span className="uppercase text-[10px] sm:text-xs md:text-sm text-[#fff] opacity-60 mt-1 md:mt-2 font-medium">
 							{label}
 						</span>
 					</div>

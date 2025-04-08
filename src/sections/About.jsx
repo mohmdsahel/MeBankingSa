@@ -40,12 +40,12 @@ const About = () => {
 
   return (
     <motion.section 
-      className="py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-black/70 to-s1"
+      className="py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-black/70 to-s1 "
       initial="initial"
       animate="animate"
       variants={containerVariants}
     >
-      <div className="max-w-7xl mx-auto">
+      <div id="about" className="max-w-7xl mx-auto">
         <motion.div 
           className="mb-12"
           variants={containerVariants}

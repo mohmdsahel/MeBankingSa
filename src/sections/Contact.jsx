@@ -13,7 +13,7 @@ const Contact = () => {
   return (
    
       
-      <div className="container relative">
+      <div id="register" className="container relative">
         <h2 className="text-center text-white text-4xl font-bold m-16">
         "Get in <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A3FF] to-[#0057FF]">touch</span>"
       </h2>
@@ -39,8 +39,9 @@ const Contact = () => {
             <div className="relative z-10">
               <div className="flex justify-center mb-6">
                 
+                
               </div>
-              <h4 className="text-white text-xl font-bold text-center mb-6">Call Us</h4>
+              <h4 className="text-white text-xl font-bold text-center mb-6">Let's Talk</h4>
               <div className="space-y-3 text-center">
                 <a href="tel:+442037696179" className="block text-gray-300 hover:text-p1 transition-colors">+44 20 3769 6179</a>
                 <a href="tel:+97152953979" className="block text-gray-300 hover:text-p1 transition-colors">+971 52 953 9979</a>

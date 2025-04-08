@@ -326,3 +326,10 @@
 .animate-scroll {
   animation: scroll var(--animation-duration) var(--animation-direction) linear infinite;
 }
+
+@layer utilities {
+  .beam-animation {
+    filter: blur(4px);
+    pointer-events: none;
+  }
+}

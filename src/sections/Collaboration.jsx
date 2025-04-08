@@ -123,7 +123,17 @@ const Heading = ({ title, className }) => (
 
 const Collaboration = () => {
   return (
+    <section id="partners">
+      <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="faq-glow_before relative z-2 border-2 border-s2 bg-s1"
+        />
+     
     <div className="container">
+      
       <h2 className="text-center text-white text-4xl font-bold m-16">
       2025 Thought Leadership <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A3FF] to-[#0057FF]">PARTNERS</span>
       </h2>
@@ -212,7 +222,7 @@ const Collaboration = () => {
      
       {/* Added Sliding Partners Sections */}
       <h2 className="text-center text-white text-4xl font-bold m-16">
-        "Series <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A3FF] to-[#0057FF]">PARTNERS</span>"
+        Series <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A3FF] to-[#0057FF]">Partners</span>
       </h2>
       <div className="overflow-hidden container w-full">
         <motion.div
@@ -247,7 +257,7 @@ const Collaboration = () => {
      
       {/* Media Partners Section */}
       <h2 className="text-center text-white text-4xl font-bold m-16">
-        "Media <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A3FF] to-[#0057FF]">PARTNERS</span>"
+        Media <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A3FF] to-[#0057FF]">Partners</span>
       </h2>
   
       <div className="overflow-hidden container w-full">
@@ -278,8 +288,19 @@ const Collaboration = () => {
             ))}
           </ul>
         </motion.div>
+        
       </div>
+      
     </div>
+    <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="faq-glow_before relative z-2 border-2 border-s2 bg-s1"
+        />
+    </section>
+    
   );
 };
 

@@ -12,7 +12,7 @@ const Header = () => {
       setHasScrolled(window.scrollY > 32);
       
       // Update active section based on scroll position
-      const sections = ["about", "speakers", "key topic", "partners", "tickets", "register"];
+      const sections = ["about", "speakers", "key topics", "partners", "tickets", "register"];
       const currentSection = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -90,7 +90,7 @@ const Header = () => {
                   <NavLink title="speakers" />
                 </li>
                 <li className="nav-li">
-                  <NavLink title="key topic" />
+                  <NavLink title="key topics" />
                 </li>
                 <li className="nav-li">
                   <NavLink title="partners" />

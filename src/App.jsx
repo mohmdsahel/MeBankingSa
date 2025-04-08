@@ -9,11 +9,13 @@ import Faq from "./sections/Faq.jsx";
 import Footer from "./sections/Footer.jsx";
 import Contact from "./sections/Contact.jsx";
 import Collaboration from "./sections/Collaboration.jsx";
+import { BeamAnimation } from "./components/BeamAnimation.jsx";
 
 
 const App = () => {
   return (
     <main className="overflow-hidden">
+      <BeamAnimation/>
       <Header />
       <Hero />
       <About />

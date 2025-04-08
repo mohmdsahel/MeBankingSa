@@ -107,13 +107,7 @@ const Faq = () => {
          
         </div>
 
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="faq-glow_before relative z-2 border-2 border-s2 bg-s1"
-        />
+        
           <div className="container flex gap-10 max-lg:block">
             
 
@@ -131,15 +125,21 @@ const Faq = () => {
           </div>
 
           
-        
+          <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="faq-glow_before relative z-2 border-2 border-s2 bg-s1"
+        />
          {/* Summit Highlights Section */}
-         <div className="mt-20">
+         <div className="mt-20 ">
             <h1 className="text-center mb-12">
               <span className="text-4xl font-bold text-white">2024 Summit</span>
               <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-p1 to-blue-500"> Highlights</span>
             </h1>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1000px] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1000px] m-10 mx-auto">
               <div className="aspect-video rounded-2xl overflow-hidden border-2 border-s3/30 shadow-xl hover:border-p1/50 transition-all duration-300">
                 <iframe 
                   className="w-full h-full" 
@@ -164,7 +164,7 @@ const Faq = () => {
               </div>
             </div>
           </div>
-      
+          
     </section>
   );
 };
