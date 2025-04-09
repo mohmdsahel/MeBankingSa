@@ -59,7 +59,7 @@ export const BeamAnimation = () => {
   const renderBeamSide = (position) => (
     <div className={`fixed ${position}-8 top-0 bottom-0 h-full pointer-events-none z-50`}>
       {/* Static vertical line with updated styling */}
-      <div className={`absolute ${position === "left" ? "left-0" : "right-0"} top-0 w-[2px] h-full border-1 border-s1 bg-s2`}></div>
+      <div className={`absolute ${position}-0 top-0 w-[2px] h-full border-1 border-s1 bg-s2`}></div>
       
       {/* Multiple animated beams */}
       {beams.map(beam => (
@@ -71,7 +71,7 @@ export const BeamAnimation = () => {
             duration: beam.duration,
             ease: "linear"
           }}
-          className={`absolute ${position === "left" ? "left-0" : "right-0"}`}
+          className={`absolute ${position}-0`}
           style={{ opacity: beam.opacity }}
         >
           {/* Trailing effect */}
