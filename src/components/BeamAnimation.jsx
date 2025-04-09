@@ -57,7 +57,7 @@ export const BeamAnimation = () => {
 
   // Function to render a beam side
   const renderBeamSide = (position) => (
-    <div className={`fixed ${position}-8 top-0 bottom-0 h-full w-[2px] pointer-events-none z-50`}>
+    <div className="fixed top-0 bottom-0 h-full w-[2px] pointer-events-none z-50" style={{ [position]: '2rem' }}>
       {/* Static vertical line with updated styling */}
       <div className="absolute inset-0 border-1 border-s1 bg-s2"></div>
       
