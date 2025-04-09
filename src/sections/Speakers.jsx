@@ -3,90 +3,89 @@ import SeriesSpeakers from "./SeriesSpeakers";
 
 const speakers = [
   {
-    name: "CHRIS MALACHOWSKY",
-    role: "FOUNDER AND NVIDIA FELLOW",
-    company: "NVIDIA",
-    image: "/images/speakers/speaker1.png"
+    name: "FAHAD ALTWAIJRI",
+    role: "Chief Information Officer",
+    company: "Bank AlJazira",
+    image: "https://mebankingai.com/sa/images-event/speakers/2025/1.png"
   },
   {
-    name: "MILDA MITKUTE",
-    role: "CO-FOUNDER",
-    company: "VINTED",
-    image: "/images/speakers/speaker2.png"
+    name: "ADEL THUWAYI",
+    role: "Chief Technology Officer",
+    company: "GIG Saudi",
+    image: "https://mebankingai.com/sa/images-event/speakers/2025/2.png"
   },
   {
-    name: "DYLAN FIELD",
-    role: "CO-FOUNDER & CEO",
-    company: "FIGMA",
-    image: "/images/speakers/speaker3.png"
+    name: "SHAHID SALEEM MOHAMMED",
+    role: "Senior Advisor - AI",
+    company: "alinma",
+    image: "https://mebankingai.com/sa/images-event/speakers/2025/7.png"
   },
   {
-    name: "NIK STORONSKY",
-    role: "FOUNDER & CEO",
-    company: "REVOLUT",
-    image: "/images/speakers/speaker4.png"
+    name: "ENG. MAHA E. ALQAHTANI",
+    role: "Senior Director Data Management",
+    company: "STC Bank",
+    image: "https://mebankingai.com/sa/images-event/speakers/2025/3.png"
   },
   {
-    name: "CHRIS MALACHOWSKY",
-    role: "FOUNDER AND NVIDIA FELLOW",
-    company: "NVIDIA",
-    image: "/images/speakers/speaker1.png"
+    name: "FAHAD BIN THABIT",
+    role: "Director Digital Data & Performance",
+    company: "Al Rajhi Takaful",
+    image: "https://mebankingai.com/sa/images-event/speakers/2025/4.png"
   },
   {
-    name: "MILDA MITKUTE",
-    role: "CO-FOUNDER",
-    company: "VINTED",
-    image: "/images/speakers/speaker2.png"
+    name: "NAHIM BASSA",
+    role: "Chief Strategy & Transformation Officer",
+    company: "Confidential",
+    image: "https://mebankingai.com/sa/images-event/speakers/2025/5.png"
   },
   {
-    name: "DYLAN FIELD",
-    role: "CO-FOUNDER & CEO",
-    company: "FIGMA",
-    image: "/images/speakers/speaker3.png"
+    name: "TALHA BIN HAFEEZ",
+    role: "Head of Open Banking, Banking as a Service & Fintech Solutioning",
+    company: "Bank AlBilad",
+    image: "https://mebankingai.com/sa/images-event/speakers/2025/6.png"
   },
   {
-    name: "NIK STORONSKY",
-    role: "FOUNDER & CEO",
-    company: "REVOLUT",
-    image: "/images/speakers/speaker4.png"
+    name: "SALMAN AKHTAR",
+    role: "Chief Executive Officer",
+    company: "AdalFi",
+    image: "https://mebankingai.com/sa/images-event/speakers/2025/8.png"
   },
   {
-    name: "CHRIS MALACHOWSKY",
-    role: "FOUNDER AND NVIDIA FELLOW",
-    company: "NVIDIA",
-    image: "/images/speakers/speaker1.png"
+    name: "SHAHID SALEEM MOHAMMED",
+    role: "Senior Advisor - AI",
+    company: "alinma",
+    image: "https://mebankingai.com/sa/images-event/speakers/2025/13.png"
   },
   {
-    name: "MILDA MITKUTE",
-    role: "CO-FOUNDER",
-    company: "VINTED",
-    image: "/images/speakers/speaker2.png"
+    name: "LADLE PATEL",
+    role: "Senior Advisor - AI Factory",
+    company: "Arab National Bank",
+    image: "https://mebankingai.com/sa/images-event/speakers/2025/11.png"
   },
   {
-    name: "DYLAN FIELD",
-    role: "CO-FOUNDER & CEO",
-    company: "FIGMA",
-    image: "/images/speakers/speaker3.png"
+    name: "HUSAIN EBRAHIM",
+    role: "AI Specialist",
+    company: "Nutanix",
+    image: "https://mebankingai.com/sa/images-event/speakers/2025/10.png"
   },
   {
-    name: "NIK STORONSKY",
-    role: "FOUNDER & CEO",
-    company: "REVOLUT",
-    image: "/images/speakers/speaker4.png"
-  },
-  // Add 8 more speakers with similar structure
+    name: "JOHN BAILEY",
+    role: "Solutions Consulting Director EMEA",
+    company: "SS&C Blue Prism",
+    image: "https://mebankingai.com/sa/images-event/speakers/2025/12.png"
+  }
 ];
 
 const Speakers = () => {
   return (
     <section id="speakers">
-       <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="faq-glow_before relative z-2 border-2 border-s2 bg-s1"
-        />
+      <motion.div 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="faq-glow_before relative z-2 border-2 border-s2 bg-s1"
+      />
       <div className="container max-w-[90rem] mx-auto">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
