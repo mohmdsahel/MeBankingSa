@@ -2,128 +2,139 @@ import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 
 const speakers = [
-    {
-      name: "CHRIS MALACHOWSKY",
-      role: "FOUNDER AND NVIDIA FELLOW",
-      company: "NVIDIA",
-      image: "/images/speakers/speaker1.png"
-    },
-    {
-      name: "MILDA MITKUTE",
-      role: "CO-FOUNDER",
-      company: "VINTED",
-      image: "/images/speakers/speaker2.png"
-    },
-    {
-      name: "DYLAN FIELD",
-      role: "CO-FOUNDER & CEO",
-      company: "FIGMA",
-      image: "/images/speakers/speaker3.png"
-    },
-    {
-      name: "NIK STORONSKY",
-      role: "FOUNDER & CEO",
-      company: "REVOLUT",
-      image: "/images/speakers/speaker4.png"
-    },
-    {
-      name: "CHRIS MALACHOWSKY",
-      role: "FOUNDER AND NVIDIA FELLOW",
-      company: "NVIDIA",
-      image: "/images/speakers/speaker1.png"
-    },
-    {
-      name: "MILDA MITKUTE",
-      role: "CO-FOUNDER",
-      company: "VINTED",
-      image: "/images/speakers/speaker2.png"
-    },
-    {
-      name: "DYLAN FIELD",
-      role: "CO-FOUNDER & CEO",
-      company: "FIGMA",
-      image: "/images/speakers/speaker3.png"
-    },
-    {
-      name: "NIK STORONSKY",
-      role: "FOUNDER & CEO",
-      company: "REVOLUT",
-      image: "/images/speakers/speaker4.png"
-    },
-    {
-      name: "CHRIS MALACHOWSKY",
-      role: "FOUNDER AND NVIDIA FELLOW",
-      company: "NVIDIA",
-      image: "/images/speakers/speaker1.png"
-    },
-    {
-      name: "MILDA MITKUTE",
-      role: "CO-FOUNDER",
-      company: "VINTED",
-      image: "/images/speakers/speaker2.png"
-    },
-    {
-      name: "DYLAN FIELD",
-      role: "CO-FOUNDER & CEO",
-      company: "FIGMA",
-      image: "/images/speakers/speaker3.png"
-    },
-    {
-      name: "NIK STORONSKY",
-      role: "FOUNDER & CEO",
-      company: "REVOLUT",
-      image: "/images/speakers/speaker4.png"
-    },
-    {
-      name: "CHRIS MALACHOWSKY",
-      role: "FOUNDER AND NVIDIA FELLOW",
-      company: "NVIDIA",
-      image: "/images/speakers/speaker1.png"
-    },
-    {
-      name: "MILDA MITKUTE",
-      role: "CO-FOUNDER",
-      company: "VINTED",
-      image: "/images/speakers/speaker2.png"
-    },
-    {
-      name: "DYLAN FIELD",
-      role: "CO-FOUNDER & CEO",
-      company: "FIGMA",
-      image: "/images/speakers/speaker3.png"
-    },
-    {
-      name: "NIK STORONSKY",
-      role: "FOUNDER & CEO",
-      company: "REVOLUT",
-      image: "/images/speakers/speaker4.png"
-    },
-    {
-      name: "CHRIS MALACHOWSKY",
-      role: "FOUNDER AND NVIDIA FELLOW",
-      company: "NVIDIA",
-      image: "/images/speakers/speaker1.png"
-    },
-    {
-      name: "MILDA MITKUTE",
-      role: "CO-FOUNDER",
-      company: "VINTED",
-      image: "/images/speakers/speaker2.png"
-    },
-    {
-      name: "DYLAN FIELD",
-      role: "CO-FOUNDER & CEO",
-      company: "FIGMA",
-      image: "/images/speakers/speaker3.png"
-    },
-    {
-      name: "NIK STORONSKY",
-      role: "FOUNDER & CEO",
-      company: "REVOLUT",
-      image: "/images/speakers/speaker4.png"
-    },
-    // Add 8 more speakers with similar structure
-  ];
+  {
+    name: "YAZID BASTAMI",
+    role: "Chief Strategy Officer",
+    company: "Vision Bank",
+    image: "https://mebankingai.com/sa/images-event/speakers/135.jpg"
+  },
+  {
+    name: "ABDULLAH ALBAR",
+    role: "Chief Data Officer",
+    company: "Abdul Latif Jameel United Finance",
+    image: "https://mebankingai.com/sa/images-event/speakers/109.jpg"
+  },
+  {
+    name: "BRIAN JAMIESON",
+    role: "Chief Innovation Officer",
+    company: "Lamaa",
+    image: "https://mebankingai.com/sa/images-event/speakers/136.jpg"
+  },
+  {
+    name: "KHALED SALEM",
+    role: "CIO",
+    company: "J-B",
+    image: "https://mebankingai.com/sa/images-event/speakers/117.jpg"
+  },
+  {
+    name: "LOGAN SIMPSON",
+    role: "Global Chief Information Security Officer",
+    company: "Hala",
+    image: "https://mebankingai.com/sa/images-event/speakers/115.jpg"
+  },
+  {
+    name: "WALID HEGAB",
+    role: "Chief Risk Officer",
+    company: "Bidaya Finance",
+    image: "https://mebankingai.com/sa/images-event/speakers/125.jpg"
+  },
+  {
+    name: "ENG. MAHA E. ALQAHTANI",
+    role: "Director Data Governance Office",
+    company: "stc bank",
+    image: "https://mebankingai.com/sa/images-event/speakers/118.jpg"
+  },
+  {
+    name: "SALEH AL SUWAIYEL",
+    role: "Director Data Analytics & Partner Insight",
+    company: "Al Rajhi Bank",
+    image: "https://mebankingai.com/sa/images-event/speakers/111.jpg"
+  },
+  {
+    name: "FAHAD BIN THABIT",
+    role: "Director Digital Data & Performance",
+    company: "Al Rajhi Takaful",
+    image: "https://mebankingai.com/sa/images-event/speakers/110.jpg"
+  },
+  {
+    name: "PRASHANT DIXIT",
+    role: "Executive Director - Digital",
+    company: "Tawuniya",
+    image: "https://mebankingai.com/sa/images-event/speakers/132.jpg"
+  },
+  {
+    name: "ZAMIR CHAUDRY",
+    role: "Executive Director - Risk",
+    company: "Tawuniya",
+    image: "https://mebankingai.com/sa/images-event/speakers/131.jpg"
+  },
+  {
+    name: "NAHIM BASSA",
+    role: "SVP: Group Head of Strategy & Transformation",
+    company: "Bank Aljazira",
+    image: "https://mebankingai.com/sa/images-event/speakers/137.jpg"
+  },
+  {
+    name: "SULTAN AL-BAYHANI",
+    role: "SVP, Head of Open Banking Business Section, Digital Innovation & Partnership Section",
+    company: "Riyad Bank",
+    image: "https://mebankingai.com/sa/images-event/speakers/130.jpg"
+  },
+  {
+    name: "MARIA MEDVEDEVA",
+    role: "Country Business Manager, KSA & Bahrain",
+    company: "Mastercard",
+    image: "https://mebankingai.com/sa/images-event/speakers/106.jpg"
+  },
+  {
+    name: "SAFDAR HUSSAIN",
+    role: "Head of Data Science",
+    company: "Banque Saudi Fransi",
+    image: "https://mebankingai.com/sa/images-event/speakers/112.jpg"
+  },
+  {
+    name: "CODEINE CARAGEA",
+    role: "Head of Customer Experience",
+    company: "Alinma Bank",
+    image: "https://mebankingai.com/sa/images-event/speakers/119.jpg"
+  },
+  {
+    name: "MUZAMMIL EBRAHIM",
+    role: "Partner: AI & Data | Financial Services - Middle East",
+    company: "Deloitte",
+    image: "https://mebankingai.com/sa/images-event/speakers/116.jpg"
+  },
+  {
+    name: "LADLE PATEL",
+    role: "Senior Advisor - Advance Analytics",
+    company: "Arab National Bank",
+    image: "https://mebankingai.com/sa/images-event/speakers/134.jpg"
+  },
+  {
+    name: "DR. EMMANUEL MANYONGANISE",
+    role: "Customer Experience Strategy Advisor",
+    company: "Bank AlBilad",
+    image: "https://mebankingai.com/sa/images-event/speakers/133.jpg"
+  },
+  {
+    name: "DR. DEBASHIS DUTTA",
+    role: "Senior Advisor - Risk Group",
+    company: "Saudi EXIM Bank",
+    image: "https://mebankingai.com/sa/images-event/speakers/140.jpg"
+  },
+  {
+    name: "ENG FAHAD ALBAZ",
+    role: "Chief Information Security Officer",
+    company: "SIMAH - Saudi Credit Bureau",
+    image: "https://mebankingai.com/sa/images-event/speakers/114.jpg"
+  },
+  {
+    name: "MOSTAFA MAHMOUD",
+    role: "Lead Enterprise Domain Architect, AI Delivery Leader",
+    company: "Bank Albilad",
+    image: "https://mebankingai.com/sa/images-event/speakers/122.jpg"
+  }
+];
 
 export const SeriesCard = ({
   items,
