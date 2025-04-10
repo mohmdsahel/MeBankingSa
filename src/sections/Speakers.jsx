@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import SeriesSpeakers from "./SeriesSpeakers";
+import { LampContainer } from "../components/LampContainer";
 
 const speakers = [
   {
@@ -78,7 +79,7 @@ const speakers = [
 
 const Speakers = () => {
   return (
-    <section id="speakers">
+    <section >
       <motion.div 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -86,16 +87,9 @@ const Speakers = () => {
         transition={{ duration: 0.8 }}
         className="faq-glow_before relative z-2 border-2 border-s2 bg-s1"
       />
-      <div className="container max-w-[90rem] mx-auto">
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="text-4xl font-bold text-center  m-16 text-white"
-        >
-         2025 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A3FF] to-[#0057FF]">Speakers</span>
-        </motion.h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div id="speakers" className="container max-w-[90rem] mx-auto">
+        <LampContainer />
+        <div className="mt-[-20rem] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {speakers.map((speaker, index) => (
             <motion.div
               key={index}
@@ -104,29 +98,29 @@ const Speakers = () => {
               transition={{ delay: index * 0.1 }}
               className="group relative cursor-pointer"
             >
-              <div className="rounded-2xl overflow-hidden mb-4 relative">
-                <div className="absolute inset-0 border-2 border-transparent group-hover:border-p1 rounded-2xl z-10 transition-all duration-300" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <img
-                  src={speaker.image}
-                  alt={speaker.name}
-                  className="w-full aspect-[4/3] object-cover grayscale group-hover:grayscale-0 transition-all duration-300 transform group-hover:scale-105"
-                />
-              </div>
-              <motion.div 
-                initial={{ y: 0 }}
-                whileHover={{ y: -5 }}
-                transition={{ duration: 0.2 }}
-                className="relative z-20"
-              >
-                <h3 className="text-white font-bold text-lg uppercase tracking-wide">{speaker.name}</h3>
-                <p className="text-p1 text-sm uppercase mb-1 tracking-wider">{speaker.role}</p>
-                <p className="text-p1 text-sm uppercase tracking-wider">{speaker.company}</p>
+                <div className="rounded-2xl overflow-hidden mb-4 relative">
+                  <div className="absolute inset-0 border-2 border-transparent group-hover:border-p1 rounded-2xl z-10 transition-all duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <img
+                    src={speaker.image}
+                    alt={speaker.name}
+                    className="w-full aspect-[4/3] object-cover grayscale group-hover:grayscale-0 transition-all duration-300 transform group-hover:scale-105"
+                  />
+                </div>
+                <motion.div 
+                  initial={{ y: 0 }}
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.2 }}
+                  className="relative z-20"
+                >
+                  <h3 className="text-white font-bold text-lg uppercase tracking-wide">{speaker.name}</h3>
+                  <p className="text-p1 text-sm uppercase mb-1 tracking-wider">{speaker.role}</p>
+                  <p className="text-p1 text-sm uppercase tracking-wider">{speaker.company}</p>
+                </motion.div>
               </motion.div>
-            </motion.div>
-          ))}
-        </div>
-       
+            ))}
+          </div>
+        
       </div>
       <SeriesSpeakers />
       

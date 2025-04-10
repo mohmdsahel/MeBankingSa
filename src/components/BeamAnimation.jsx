@@ -105,9 +105,9 @@ export const BeamAnimation = () => {
   );
 
   return (
-    <>
+    <div className="hidden lg:block"> {/* Hide on mobile/tablet, show on desktop */}
       {renderBeamSide("left")}
       {renderBeamSide("right")}
-    </>
+    </div>
   );
 };
