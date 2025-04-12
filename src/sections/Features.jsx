@@ -6,13 +6,26 @@ const Features = () => {
   return (
     
     <section id="key topics" >
-       <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="faq-glow_before relative z-2 border-2 border-s2 bg-s1"
-        />
+      <motion.div 
+            initial={{ opacity: 1 }}
+            animate={{ 
+              opacity: [0.5, 1, 1, 0.5],
+              backgroundPosition: ["0% 100%", "100% 100%"],
+              boxShadow: [
+                "0 0 10px rgba(0, 163, 255, 0)",
+                "0 0 20px rgba(0, 163, 255, 0.5)",
+                "0 0 30px rgba(0, 163, 255, 0.3)",
+                "0 0 10px rgba(0, 163, 255, 0)"
+              ]
+            }}
+            transition={{ 
+              duration: 3
+              ,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+            className="faq-glow_before relative z-2 border-2 border-s2 bg-gradient-to-r from-[#00A3FF]/20 via-[#0057FF]/40 to-[#00A3FF]/20 bg-[length:200%_100%]"
+          />
        
         <div className="container w-full m-12 ">
           
