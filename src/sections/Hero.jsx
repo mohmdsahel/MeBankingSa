@@ -32,7 +32,7 @@ const Hero = () => {
               <div className="flex items-center justify-center flex-wrap max-md:flex-col max-md:gap-4">
                 <div className="flex items-center gap-2">
                   <img src="/images/calendar.svg" alt="calendar" className="w-4 h-4" />
-                  <span className="text-xl font-medium text-white max-md:text-lg max-sm:text-base">April 30th (Wednesday) 2025</span>
+                  <span className="text-xl font-medium text-white max-md:text-lg max-sm:text-base">September 3rd (Wednesday) 2025</span>
                 </div>
                 <span className="text-white/30 mx-2 max-md:hidden">|</span>
                 <div className="flex items-center gap-2">
